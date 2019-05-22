@@ -8,29 +8,18 @@
     hook up event handlers 
   */
   function register_event_handlers() {
-
-
-
     // Leva para a pagina cadastro de hemocentros
     $(document).on("click", ".uib_w_16", function (evt) {
 
       activate_page("#cadastrohemocentro");
     });
-
-
     // leva para a pagina cadastro de usuarios
     $(document).on("click", ".uib_w_33", function (evt) {
 
       activate_page("#cadastros");
     });
-
-
     // meu cadastro LEonardo
-
     $(document).on("click", ".uib_w_75", function (evt) {
-
-
-
       function Listateste() {
         $.ajax({
 
@@ -46,11 +35,7 @@
       }
 
       Listateste();
-
-
-
     });
-
 
     $(document).on("click", ".uib_w_77", function (evt) {
       function updateusuario() {
@@ -58,7 +43,6 @@
         $listatelefone = $('#listatelefone').val();
 
         $listaemail = $('#listaemail').val();
-
 
         if ((listaemail != "") && (listatelefone != "")) {
 
@@ -85,9 +69,6 @@
     $(document).on("click", ".uib_w_75", function (evt) {
 
       activate_page("#meucadastro");
-
-
-
     });
 
     // Leva para a pagina cadastro de hemocentros
@@ -96,22 +77,17 @@
       activate_page("#cadastrohemocentro");
     });
 
-
     // leva para a pagina cadastro de usuarios
     $(document).on("click", ".uib_w_14", function (evt) {
 
       activate_page("#cadastros");
     });
 
-
     // botão para ativar função esqueçi minha senha
     $(document).on("click", ".uib_w_10", function (evt) {
       activate_page("#recuperarsenha");
 
     });
-
-
-
 
     // 1 - PNT
     $(document).on("click", "#btnmap", function (evt) {
@@ -139,9 +115,6 @@
       uib_sb.toggle_sidebar($(".uib_w_52"));
     });
 
-
-
-
     // 3 - PNT
     $(document).on("click", ".uib_w_60", function (evt) {
       /*global uib_sb */
@@ -166,8 +139,6 @@
 
         latitude = position.coords.latitude;
         longitude = position.coords.longitude;
-
-
       };
 
       function onError(error) {
@@ -190,7 +161,6 @@
               cidade_fim = (cidade_quebrada[0].split(','));
               cidade_fim2 = cidade_fim[0];
 
-
               function listacamptotal() {
 
                 $.ajax({
@@ -212,8 +182,6 @@
 
               listacamptotal();
 
-
-
             } else {
               alert('Não foi possível identificar sua 	localização');
             }
@@ -224,7 +192,6 @@
       }
       reverseGeocode();
     });
-
 
     // 1 - Lucas - botão que leva para o termo do usuario
     $(document).on("click", ".uib_w_520", function (evt) {
@@ -238,13 +205,11 @@
       activate_page("#Termo2");
     });
 
-
     //Criar conta */
     $(document).on("click", ".uib_w_8", function (evt) {
 
       activate_page("#cadastros");
     });
-
 
     /* button  .uib_w_58 */
     $(document).on("click", ".uib_w_58", function (evt) {
@@ -425,7 +390,6 @@
               cidade_fim = (cidade_quebrada[0].split(','));
               cidade_fim2 = cidade_fim[0];
 
-
               function listahemogeo() {
 
                 $.ajax({
@@ -444,8 +408,6 @@
 
               listahemogeo();
               activate_subpage("#hemocentros");
-
-
             } else {
               alert('Não foi possível identificar sua 	localização');
             }
@@ -458,7 +420,6 @@
 
 
     });
-
 
     // 4 Douglas - Botão voltar da pagina do termo do usuario, volta para cadastro usuario
     $(document).on("click", ".uib_w_620", function (evt) {
