@@ -1,37 +1,26 @@
-$( document ).ready(function() {
-                    var $server;
-                    $server = 'http://localhost/XDK/';
-                  
-                   
-    
-    $( document ).ready(function() {
-                    var $server;
-                    $server = 'http://localhost/XDK/';
-                  
-                   function Lista(){
-                           $.ajax({
+$(document).ready(function () {
+    var $server;
+    $server = 'http://localhost/XDK/';
 
-                               type: "get",
-                               dataType  : 'html',
-                               url: $server+"/conecta.php",
-                               data: "acao=listacampanhas",
-                               success: function(data) {
-                                    $('#listacampanhas').html(data);
-                                }
-                           });
-                    }
+    $(document).ready(function () {
+        var $server;
+        $server = 'http://localhost/XDK/';
 
-                 Lista();
+        function Lista() {
+            $.ajax({
 
-            });  
-			
-			});  
-    
-    
-   
+                type: "get",
+                dataType: 'html',
+                url: $server + "/conecta.php",
+                data: "acao=listacampanhas",
+                success: function (data) {
+                    $('#listacampanhas').html(data);
+                }
+            });
+        }
 
-                         
-			
-						
-			
-			
+        Lista();
+
+    });
+
+});
